@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Eventos</title>
+        <script src="js/jquery.js"></script>
+    </head>
+    <body>
+        <h1><u>Eventos</u></h1>
+        <h3>click</h3>
+
+        <button>Presiona aqui para olcultar</button>
+
+        <h3>Doble click</h3>
+
+        <p>Al presionar dos veces se ocultara</p>
+
+        <h3>Mouser Enter</h3>
+
+        <span id="mouse">Al pasar el mouse por encima se ocultara</span>
+
+        <h3>Mouse Leave</h3>
+
+        <span class="leave">Al sacar el mouse de la itequeta se ocultara</span></body></br>
+        <span class="leave">Al sacar el mouse de la itequeta se ocultara x2</span>
+
+        <h3>Mouse Down</h3>
+
+        <span class="down">Al hacer click en con el mouse se activara</span></br>
+        <span class="down">Una vez mas</span>
+
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $(this).hide();
+                });
+
+                $("p").dblclick(function(){
+                    $(this).hide();
+                });
+
+                $("#mouse").mouseenter(function(){
+                    $(this).hide();
+                    alert("ocultado")
+                });
+
+                $(".leave").mouseleave(function(){
+                    $(this).hide();
+                    alert("Se ocultara al dejar de señalar");
+                });
+
+                $(".down").mousedown(function(){
+                    $(this).hide();
+                    alert("Se ha activado mousedown");
+                });
+
+            });
+        </script>
+    </body>
+</html>
