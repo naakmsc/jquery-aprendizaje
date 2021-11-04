@@ -27,6 +27,25 @@
         <span class="down">Al hacer click en con el mouse se activara</span></br>
         <span class="down">Una vez mas</span>
 
+        <h3>Mouse Up</h3>
+
+        <span class="up">Al dejar de presionar se activa</span></br>
+        <span class="up">Otra vez</span>
+
+        <h3>Hover</h3>
+
+        <span class="hov" style="color:red;">Al pasar por encima habra un cambios</span></br>
+        <span class="hov" style="color:red;">Otra vez</span>
+        
+        <h3>Focus</h3>
+
+        <span>Nombre: <input type="text" name="usuario" placeholder="Usuario"></span>
+        <span>Contraseña: <input type="password" name="contraseña" placeholder="••••••••"></span>
+
+        <h3>On</h3>
+
+        <span class="sp">Se ejecutan varios eventos</span>
+
         <script>
             $(document).ready(function(){
                 $("button").click(function(){
@@ -50,6 +69,34 @@
                 $(".down").mousedown(function(){
                     $(this).hide();
                     alert("Se ha activado mousedown");
+                });
+
+                $(".up").mouseup(function(){
+                    $(this).hide();
+                    alert("Se dejo de presionar");
+                });
+
+                $(".hov").hover(function(){
+                    $(this).css("color","blue");
+                });
+
+                $("input").focus(function(){
+                    $(this).css("background-color","#8ed79e")
+                });
+                $("input").blur(function(){
+                    $(this).css("background-color","#ffffff")
+                });
+
+                $(".sp").on({
+                    mouseenter: function(){
+                        $(this).css("background-color","#9bd84b");
+                    },
+                    mouseleave: function(){
+                        $(this).css("background-color","#4ba6d8");
+                    },
+                    click: function(){
+                        $(this).css("background-color","#d84ba9");
+                    }
                 });
 
             });
