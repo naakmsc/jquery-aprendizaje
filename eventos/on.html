@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>On</title>
+        <script src="../js/jquery.js"></script>   
+    </head>
+    <body>
+        <h3>On</h3>
+
+        <span class="sp">Se ejecutan varios eventos</span>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $(".sp").on({
+                mouseenter: function(){
+                    $(this).css("background-color","#9bd84b");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color","#4ba6d8");
+                },
+                click: function(){
+                    $(this).css("background-color","#d84ba9");
+                }
+            });
+        });
+    </script>
+</html>

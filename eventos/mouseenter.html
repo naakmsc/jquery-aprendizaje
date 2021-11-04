@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Mouse Enter</title>
+        <script src="../js/jquery.js"></script>   
+    </head>
+    <body>
+        <h3>Mouser Enter</h3>
+
+        <span id="mouse">Al pasar el mouse por encima se ocultara</span>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("#mouse").mouseenter(function(){
+                $(this).hide();
+                alert("ocultado")
+            });
+        });
+    </script>
+</html>

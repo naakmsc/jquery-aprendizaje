@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Mouse Leave</title>
+        <script src="../js/jquery.js"></script>   
+    </head>
+    <body>
+        <h3>Mouse Leave</h3>
+
+        <span class="leave">Al sacar el mouse de la itequeta se ocultara</span></body></br>
+        <span class="leave">Al sacar el mouse de la itequeta se ocultara x2</span>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $(".leave").mouseleave(function(){
+                $(this).hide();
+                alert("Se ocultara al dejar de señalar");
+            });
+        });
+    </script>
+</html>

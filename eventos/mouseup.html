@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Mouse Up</title>
+        <script src="../js/jquery.js"></script>   
+    </head>
+    <body>
+        <h3>Mouse Up</h3>
+
+        <span class="up">Al dejar de presionar se activa</span></br>
+        <span class="up">Otra vez</span>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $(".up").mouseup(function(){
+                $(this).hide();
+                alert("Se dejo de presionar");
+            });
+        });
+    </script>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Mouse Down</title>
+        <script src="../js/jquery.js"></script>   
+    </head>
+    <body>
+        <h3>Mouse Down</h3>
+
+        <span class="down">Al hacer click en con el mouse se activara</span></br>
+        <span class="down">Una vez mas</span>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $(".down").mousedown(function(){
+                $(this).hide();
+                alert("Se ha activado mousedown");
+            });
+        });
+    </script>
+</html>

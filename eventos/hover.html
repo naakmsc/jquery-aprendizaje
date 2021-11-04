@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Hover</title>
+        <script src="../js/jquery.js"></script>   
+    </head>
+    <body>
+        <h3>Hover</h3>
+
+        <span class="hov" style="color:red;">Al pasar por encima habra un cambios</span></br>
+        <span class="hov" style="color:red;">Otra vez</span>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $(".hov").hover(function(){
+                $(this).css("color","blue");
+            });
+        });
+    </script>
+</html>

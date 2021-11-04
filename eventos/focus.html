@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Focus and Blur</title>
+        <script src="../js/jquery.js"></script>   
+    </head>
+    <body>
+        <h3>Focus and Blur</h3>
+
+        <span>Nombre: <input type="text" name="usuario" placeholder="Usuario"></span>
+        <span>Contraseña: <input type="password" name="contraseña" placeholder="••••••••"></span>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("input").focus(function(){
+                $(this).css("background-color","#8ed79e")
+            });
+            $("input").blur(function(){
+                $(this).css("background-color","#ffffff")
+            });
+        });
+    </script>
+</html>
