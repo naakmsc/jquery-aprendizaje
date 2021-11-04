@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Chaining</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script src="../js/jquery.js"></script>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #box{
+                width: 50px;
+                height: 50px;
+                background-color: darkgreen;
+                position:absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Chaining</h3>
+        <button id="go">Mostrar</button>
+        <div id="box"></div>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("#go").click(function(){
+                $("#box").slideUp(2000)
+                        .slideDown(5000)
+                        .animate({left:"+=50px"},2000,function(){
+                            $("#box").animate({left:"-=50px"},2000);
+                            console.log("Los Chaining es agrupar varios metodos de Jquery");
+                        });
+            });
+        });
+    </script>
+</html>
