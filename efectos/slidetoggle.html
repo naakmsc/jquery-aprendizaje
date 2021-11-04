@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>SlideToggle</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script src="../js/jquery.js"></script>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #caja{
+                background-color: black;
+                color: white;
+                height: 100px;
+                width: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>SlideToggle</h3>
+        <button id="boton">Click aqui</button>
+        <div id="caja">Prueba Slide Toggle</div>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("#boton").click(function(){
+                $("#caja").slideToggle(1000,function(){
+                    console.log("todo bien")
+                });
+            });
+        });
+    </script>
+</html>

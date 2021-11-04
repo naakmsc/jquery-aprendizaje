@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>SlideDown</title>
+        <script src="../js/jquery.js"></script>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #caja{
+                width: 100px;
+                height: 200px;
+                padding: 50px;
+                display: none;
+                background-color: brown;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>SlideDown</h3>
+        <button id="boton">Click aqui</button>
+        <div id="caja">Metodo SlideDown</div>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("#boton").click(function(){
+                $("#caja").slideDown(5000,function(){
+                    alert("Se activo SlideDown");
+                });
+            });
+        });
+    </script>
+</html>
