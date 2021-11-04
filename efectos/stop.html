@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Stop</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script src="../js/jquery.js"></script>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #caja{
+                width: 100px;
+                height: 100px;
+                background-color: darkcyan;
+                font-weight: bold;
+                position:absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Stop usando Animate</h3>
+        <button id="empezar">Empezar</button>
+        <button id="parar">Parar</button>
+        <button id="volver">Disminuir</button>
+        <div id="caja">HELLO</div>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("#empezar").click(function(){
+                $("#caja").animate({left:"+=500"},2000);
+            });
+            $("#parar").click(function(){
+                $("#caja").stop();
+            });
+            $("#volver").click(function(){
+                $("#caja").animate({left:"-=500"},2000);
+            });
+        });
+    </script>
+</html>
