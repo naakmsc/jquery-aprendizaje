@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>FadeToggle</title>
+        <script src="../js/jquery.js"></script>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            div{
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                text-align: center;
+                vertical-align: middle;
+                color: white;
+                padding: 0;
+                line-height: 100px;
+            }
+            #caja1{
+                background-color: red;
+            }
+            #caja2{
+                background-color: blue;
+            }
+            #caja3{
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>FadeToggle</h2>
+        <button id="fadei">FadeToggle</button>
+
+        <div id="caja1">Rojo</div>
+        <div id="caja2">Azul</div>
+        <div id="caja3">Verde</div>
+
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("#fadei").click(function(){
+                $("#caja1").fadeToggle("fast");
+                $("#caja2").fadeToggle("slow");
+                $("#caja3").fadeToggle(1000);
+            });
+        });
+    </script>
+</html>

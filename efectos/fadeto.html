@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>FadeTo</title>
+        <script src="../js/jquery.js"></script>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            div{
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                text-align: center;
+                vertical-align: middle;
+                color: white;
+                padding: 0;
+                line-height: 100px;
+            }
+            #caja1{
+                background-color: red;
+            }
+            #caja2{
+                background-color: blue;
+            }
+            #caja3{
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>FadeTo</h2>
+        <button id="fadei">FadeTo</button>
+
+        <div id="caja1">Rojo</div>
+        <div id="caja2">Azul</div>
+        <div id="caja3">Verde</div>
+
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("#fadei").click(function(){
+                $("#caja1").fadeTo("fast",0.6);
+                $("#caja2").fadeTo("slow",0.3);
+                $("#caja3").fadeTo(3000,0.1);
+            });
+        });
+    </script>
+</html>
