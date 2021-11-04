@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Animate</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script src="../js/jquery.js"></script>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #cont{
+                background-color: blueviolet;
+                width: 200px;
+                height: 200px;
+                color: cornsilk;
+                font-weight: bold;
+                position: absolute;
+                text-align: center;
+                padding: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Animate</h3>
+
+        <button id="activador">Presiona aqui</button>
+
+        <div id="cont">Efecto animate</div>
+
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("#activador").click(function(){
+                function aleatorio(min,max){
+                    return Math.floor(Math.random()*(max-min+1))+min;
+                };
+                $("#cont").animate({
+                    left: aleatorio(10,500),
+                    top: aleatorio(10,500),
+                    opacity: aleatorio(0.1,1),
+                    height: aleatorio(50,350),
+                    width: aleatorio(50,350)
+                });
+            });
+        });
+    </script>
+</html>
