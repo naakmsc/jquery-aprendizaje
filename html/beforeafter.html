@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before After</title>
+    <script src="../js/jquery.js"></script>
+</head>
+<body>
+    <div style="background-color: brown;color: white;width: 500px;height: 50px;padding-top: 25px;text-align: center;">Hola mundo</div>
+
+    <span>
+        Ingresa un valor
+        <input type="text">
+        <button id="antes">Before</button>
+        <button id="despues">after</button>
+    </span>
+</body>
+    <script>
+        $(document).ready(function(){
+            $("#antes").click(function(){
+                $("div").before("<b>"+$("input").val()+"</b><br>");
+            });
+            $("#despues").click(function(){
+                $("div").after("<b>"+$("input").val()+"</b><br>");
+            });
+        });
+    </script>
+</html>

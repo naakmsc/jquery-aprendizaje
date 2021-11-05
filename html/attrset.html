@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AttrSet</title>
+    <script src="../js/jquery.js"></script>
+</head>
+<body>
+    <span id="texto">Cambiaremos el valor del ID de este span</span>
+    <button id="boton">Cambiar</button>
+</body>
+    <script>
+        $(document).ready(function(){
+            $("#boton").click(function(){
+                $("#texto").attr("id","Nombre");
+                alert($("span").attr("id"));
+            });
+        });
+    </script>
+</html>
