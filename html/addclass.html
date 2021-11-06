@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddClass</title>
+    <script src="../js/jquery.js"></script>
+    <style>
+        .important{
+            font-weight: bold;
+            font-size: x-large;
+        }
+        .blue{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cabecera</h1>
+    <h2>Subtitulo</h2>
+    <p>Un parrafito chiquito</p>
+    <div>Este es un div o gondola</div>
+    
+    <button id="boton">Agregar Clase</button>
+</body>
+    <script>
+        $(document).ready(function(){
+            $("#boton").click(function(){
+                $("h1, h2, p").addClass("blue");
+                $("div").addClass("important");
+            });
+        });
+    </script>
+</html>
