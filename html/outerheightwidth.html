@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inner Height and inner Width</title>
+    <script src="../js/jquery.js"></script>
+    <style>
+        #important{
+            width: 345px;
+            height: 200px;
+            padding: 20px;
+            margin: 7px;
+            border: 15px solid blue;
+            background-color: #ff0000;
+            color:white;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="important"></div>
+
+    <h2>$(selector).innerWidth(): <p>retorna el ancho junto con el padding y borde</p></h2>
+    <h2>$(selector).innerHeight(): <p>retorna lo alto junto con el padding y borde</p></h2>
+
+    <button id="boton">Ver</button>
+
+</body>
+    <script>
+        var texto = "";
+        $(document).ready(function(){
+            $("#boton").click(function(){
+                texto += "ancho del div: " + $("#important").width() + "<br>";
+                texto += "alto del div: " + $("#important").height() + "<br>";
+                texto += "inner Width del div: " + $("#important").innerWidth() + "<br>";
+                texto += "inner Height del div: " + $("#important").innerHeight() + "<br>";
+                texto += "outer Width del div: " + $("#important").outerWidth() + "<br>";
+                texto += "outer Height del div: " + $("#important").outerHeight() + "<br>";
+                $("#important").html(texto);
+                console.log(texto);
+            });
+        });
+    </script>
+</html>
