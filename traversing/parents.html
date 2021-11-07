@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parents</title>
+    <script src="../js/jquery.js"></script>
+    <style>
+        .important{
+            display: block;
+            border: 2px solid lightgray;
+            color:lightgray;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+   <div class="important"> body (great grandparent)
+       <div class="important" style="width: 500px;"> div great / grandparent
+           <ul class="important"> ul grandparent
+               <li class="important"> li direct parent
+                   <span class="important">
+                        span
+                   </span>
+                </li>
+           </ul>
+       </div>
+   </div> 
+   <button>Probar</button>
+</body>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("span").parents("ul").css({"color":"blue","border": "2px solid orange"});
+            });
+        });
+    </script>
+</html>
