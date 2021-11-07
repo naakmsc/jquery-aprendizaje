@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find</title>
+    <script src="../js/jquery.js"></script>
+    <style>
+        .important{
+            display: block;
+            border: 2px solid lightgray;
+            color: lightgray;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="important" style="width:500px"> div (current element)
+        <p class="first"> p (child)
+            <span>span grandchildren</span>
+        </p>
+        <p class="first"> p (child)
+            <span>span grandchildren</span>
+        </p>
+    </div>
+    <button>Ejecutar</button>
+</body>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("div").find("span").css({"color":"blue", "border": "2px solid blue"});
+            });
+        });
+    </script>
+</html>
