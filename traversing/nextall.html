@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next All</title>
+    <script src="../js/jquery.js"></script>
+    <style>
+        .important{
+            display: block;
+            border: 2px solid lightgray;
+            color: lightgray;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body class="important">
+    <div> div (current)
+        <p>p</p>
+        <span>span (grandchild)</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+    </div>
+    <button>Ejecutar</button>
+</body>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("h2").nextAll().css({"color":"green", "border": "2px solid grenn"});
+            });
+        });
+    </script>
+</html>

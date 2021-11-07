@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eq</title>
+    <script src="../js/jquery.js"></script>
+
+</head>
+<body>
+    <h1>Bienvenido a mi pagina</h1>
+
+    <p>Esta es una prueba con parrafos</p>
+    <p>Un parrafito de prueba</p>
+    <p>Otro parrafito de prueba</p>
+    <p>Un parrafote grande de prueba</p>
+    <p>Otro parrafote grande de prueba</p>
+    <p>Un parrafito solitario de prueba</p>
+
+</body>
+    <script>
+        $(document).ready(function(){
+            $("p").eq(1).css("background-color","yellow");
+        });
+    </script>
+</html>

@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+    <script src="../js/jquery.js"></script>
+    <style>
+        .important{
+            display: block;
+            border: 2px solid lightgray;
+            color: lightgray;
+            padding: 5px;
+            margin: 15px;
+        }
+        div{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a mi pagina</h1>
+
+    <p>Esta es una prueba con parrafos</p>
+
+    <div>
+        <p>Un parrafito de prueba</p>
+        <p>Otro parrafito de prueba</p>
+    </div>
+    <div>
+        <p>Un parrafote grande de prueba</p>
+        <p>Otro parrafote grande de prueba</p>
+    </div>
+
+    <p>Un parrafito solitario de prueba</p>
+
+</body>
+    <script>
+        $(document).ready(function(){
+            $("div p").first().css("background-color","yellow");
+        });
+    </script>
+</html>
