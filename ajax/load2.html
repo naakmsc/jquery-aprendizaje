@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Load 2</title>
+    <script src="../js/jquery.js"></script>
+</head>
+<body>
+    <div id="div1"><h2>Esto cambiara con ajax</h2></div>
+    <button>Cargar</button>
+</body>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#div1").load("archivo.php",function(responseTxt,statusTxt,xhr){
+                if(statusTxt == "success"){
+                    alert("contenido cargado  exitosamente!");
+                }
+                if(statusTxt == "error"){
+                    alert("Error en cargar los datos: " + xhr.status + " : " + xhr.statusText);
+                }
+            });
+        });
+    });
+</script>
+</html>
